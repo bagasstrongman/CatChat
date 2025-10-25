@@ -1,0 +1,179 @@
+:root{
+  --bg: #fff8f0;
+  --accent: #ffb347;
+  --muted: #6b6b6b;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#111;
+  display:flex;
+  min-height:100vh;
+  flex-direction:column;
+  align-items:center;
+  padding:1.5rem;
+}
+
+header { text-align:center; margin-bottom:1rem; }
+h1 { margin:0; font-size:1.6rem; }
+.subtitle { margin:0.25rem 0 0; color:var(--muted); }
+
+main{
+  width:100%;
+  max-width:640px;
+  background:white;
+  border-radius:12px;
+  padding:1rem 1.25rem;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+
+.controls{ display:flex; gap:0.5rem; margin-bottom:0.75rem; flex-wrap:wrap; }
+button{
+  background:var(--accent);
+  color:white;
+  border:0;
+  padding:0.55rem 0.9rem;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+button[disabled]{ opacity:0.6; cursor:not-allowed; }
+.install-btn {
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
+.file-input{ margin-top:0.5rem; display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; }
+.file-input input { padding:6px; }
+
+.result{ margin-top:1rem; }
+.card{
+  background:#fffdfb;
+  padding:0.9rem;
+  border-radius:10px;
+  border:1px solid rgba(0,0,0,0.03);
+  min-height:60px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.toast {
+  position: fixed;
+  top: 20px; /* ⬅️ ganti dari bottom ke top */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 179, 71, 0.85);
+  color: white;
+  padding: 0.9rem 1.4rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  cursor: pointer;
+  font-weight: 500;
+  backdrop-filter: blur(6px);
+  transition: opacity 0.4s ease, transform 0.3s ease;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.toast.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -30px); /* efek slide ke atas */
+}
+.close-toast {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-left: 8px;
+}
+.close-toast:hover {
+  color: #222;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 1.2rem 0 0.8rem;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 640px;
+  background: transparent;
+}
+
+footer small {
+  display: block;
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+footer a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #ff9f1c; /* sedikit lebih terang dari accent */
+}
+
+.upload-section {
+  margin-top: 0.8rem;
+}
+
+.file-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.6rem;
+}
+
+.file-label {
+  background: rgba(255, 179, 71, 0.12);
+  border: 2px dashed var(--accent);
+  color: var(--accent);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.file-label:hover {
+  background: rgba(255, 179, 71, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.file-icon {
+  font-size: 1.6rem;
+}
+
+.file-text {
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+
+
+
+

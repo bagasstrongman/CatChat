@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cat Chat — Meow Translator</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/cat-chat.png" />
+  <link rel="apple-touch-icon" href="images/cat-chat.png" />
+
+  <meta name="theme-color" content="#ffb347" />
+</head>
+<body>
+  <header>
+    <h1>Cat Chat 😺</h1>
+    <p class="subtitle">Rekam suara kucing, dapatkan terjemahan (simulasi AI)</p>
+  </header>
+
+  <main>
+    <section class="recorder">
+      <div class="controls">
+        <button id="btnRecord">🎤 Rekam</button>
+        <button id="btnStop" disabled>⏹ Stop</button>
+        <button id="btnUpload" disabled>📤 Terjemahkan</button>
+      </div>
+
+      <div class="playback">
+        <audio id="audioPreview" controls hidden></audio>
+      </div>
+
+<section class="upload-section">
+  <div class="file-input">
+    <label for="fileInput" class="file-label">
+      <span class="file-icon">🎵</span>
+      <span class="file-text">Pilih atau seret file audio (.wav / .mp3)</span>
+    </label>
+    <input id="fileInput" type="file" accept="audio/*" hidden />
+  </div>
+</section>
+
+
+    <section class="result">
+      <h2>Hasil Terjemahan</h2>
+      <div id="resultCard" class="card">
+        <p id="resultText">Belum ada terjemahan</p>
+        <small id="confidence" style="display:block;margin-top:8px;color:#666"></small>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+  <small>Cat Chat • Demo sederhana — versi simulasi AI</small><br />
+  <small>
+    Powered by
+    <a href="https://www.instagram.com/fly_morph/" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       style="color:#ffb347; font-weight:600; text-decoration:none;">
+      Fly Morph Studio
+    </a>
+  </small>
+</footer>
+
+<div id="toast" class="toast hidden">
+  <p>🐾 Install <b>Cat Chat</b> sekarang?</p>
+  <button id="close-toast" class="close-toast">×</button>
+</div>
+
+  <button id="btnInstall" class="install-btn" hidden>📲 Install Aplikasi</button>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
