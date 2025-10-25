@@ -7,12 +7,12 @@
   "theme_color": "#ffb347",
   "icons": [
     {
-      "src": "./images/cat-chat.png",
+      "src": "./Images/cat-chat.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "./images/cat-chat.png",
+      "src": "./Images/cat-chat.png",
       "sizes": "512x512",
       "type": "image/png"
     }
